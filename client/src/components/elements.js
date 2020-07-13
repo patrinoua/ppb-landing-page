@@ -81,13 +81,3 @@ export const GetInvolved = styled(Section)`
     width: 70%;
   }
 `
-
-// bug reporting app :P
-const colors = {
-  backgroundColor: '#e1e6eb',
-  textGrey: '#afbdcb',
-  textBlack: '#354352',
-  textGreen: '#5eb77f',
-  highlightGrey: '#eff2f6',
-  boxShadow: ' rgba(0, 0, 0, 0.25)',
-}
