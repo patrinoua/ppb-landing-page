@@ -1,18 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
-import {
-  SectionContainer,
-  UnlimitedHeightSection,
-  Description,
-} from './elements'
+import { SectionContainer, ScrollFullContainer } from './elements'
 
-const TextContainer = styled.div`
-  max-width: 600px;
-`
 function NextSteps() {
   return (
     <SectionContainer>
-      <UnlimitedHeightSection>
+      <ScrollFullContainer>
         <h3>Step 1</h3> Finish the development of PingPongBuddies.
         <br />
         <h3>Step 2</h3>
@@ -38,7 +30,7 @@ function NextSteps() {
           Portfolio with samples of work and rates. Looking forward to hearing
           from you!
         </p>
-      </UnlimitedHeightSection>
+      </ScrollFullContainer>
     </SectionContainer>
   )
 }

@@ -17,6 +17,17 @@ export const SectionContainer = styled.div`
     background: transparent; /* Optional: just make scrollbar invisible */
   }
 `
+
+export const ScrollFullContainer = styled.div`
+  max-width: 600px;
+  height: 100%;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+`
+
 export const Section = styled.div`
   width: 100%;
   height: 33.33%;
@@ -49,9 +60,6 @@ export const Description = styled(Section)`
   @media (max-width: 750px) {
     min-height: auto;
   }
-`
-export const UnlimitedHeightSection = styled(Description)`
-  height: auto;
 `
 
 export const Error = styled(Section)`
