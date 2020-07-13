@@ -15,9 +15,7 @@ const NavigationBar = styled.div`
   justify-content: flex-end;
   height: 50px;
   background: white;
-  @media (max-width: 750px) {
-    justify-content: center;
-  }
+  justify-content: center;
 `
 const NavigationItem = styled(Link)`
   display: flex;
