@@ -5,16 +5,22 @@ function NextSteps() {
   return (
     <SectionContainer>
       <ScrollFullContainer>
-        <h3>Step 1</h3> Finish the development of PingPongBuddies.
+        <p>
+          PingPongBuddies is only the start! The broader vision is to create an
+          app where people can find other people for any activity they wish:
+          From ping pong to playing chess, going to the fleamarket or even
+          co-working in a cafe!
+        </p>
+        <h2>Timeline</h2>
+        <h3>1.</h3> Finish the development of PingPongBuddies.
         <br />
-        <h3>Step 2</h3>
-        Once pingpongbuddies is out there will be another app where users choose
-        between a range of activities:
+        <h3>2.</h3>
+        Develop the app further to offer a wide variety of activities:
         <h1>Buddies</h1>
         <p>
-          This is so far called "Buddies". A brand that reflects energy,
-          freshness, activeness, community, trust and security should be
-          developed before the app launches.
+          So far, this is called "Buddies". A brand that reflects energy,
+          freshness, activeness, empowerment to all, trust and the feeling of an
+          international friendly community is on its way, including
         </p>
         <ul>
           <li>Brand Name</li>
