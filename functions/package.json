@@ -1,5 +1,5 @@
 {
-  "name": "functions",
+  "name": "ppb-landing-firebase",
   "description": "Cloud Functions for Firebase",
   "scripts": {
     "lint": "eslint .",
