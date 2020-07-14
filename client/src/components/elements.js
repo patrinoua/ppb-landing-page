@@ -22,6 +22,7 @@ export const ScrollFullContainer = styled.div`
   max-width: 600px;
   height: 100%;
   overflow: scroll;
+  font-size: 18px;
   ::-webkit-scrollbar {
     width: 0px; /* Remove scrollbar space */
     background: transparent; /* Optional: just make scrollbar invisible */
