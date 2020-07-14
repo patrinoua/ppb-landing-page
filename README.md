@@ -23,5 +23,7 @@ npm start
 to deploy to firebase:
 
 ```
+cd client
+npm run build
 firebase deploy
 ```
