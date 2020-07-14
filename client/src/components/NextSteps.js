@@ -1,7 +1,21 @@
 import React from 'react'
 import { SectionContainer, ScrollFullContainer } from './elements'
+import Fab from '@material-ui/core/Fab'
+import { makeStyles } from '@material-ui/core/styles'
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}))
 function NextSteps() {
+  const classes = useStyles()
+
   return (
     <SectionContainer>
       <ScrollFullContainer>
@@ -36,6 +50,9 @@ function NextSteps() {
           Portfolio with samples of work and rates. Looking forward to hearing
           from you!
         </p>
+        <Fab variant='extended' onClick={() => console.log('whoop')}>
+          Contact
+        </Fab>
       </ScrollFullContainer>
     </SectionContainer>
   )

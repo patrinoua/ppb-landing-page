@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Welcome from './components/Welcome'
 import Screenshots from './components/Screenshots'
 import NextSteps from './components/NextSteps'
+import Contact from './components/Contact'
 
 const NavigationBar = styled.div`
   width: 100%;
@@ -63,12 +64,14 @@ function App() {
         <NavigationItem to='/welcome'>Welcome</NavigationItem>
         <NavigationItem to='/screenshots'>Screenshots</NavigationItem>
         <NavigationItem to='/nextsteps'>Next Steps</NavigationItem>
+        <NavigationItem to='/contact'>Contact</NavigationItem>
       </NavigationBar>
       <Container>
         <Route exact path='/' render={() => <Welcome />} />
         <Route exact path='/welcome' render={() => <Welcome />} />
         <Route exact path='/screenshots' render={() => <Screenshots />} />
         <Route exact path='/nextsteps' render={() => <NextSteps />} />
+        <Route exact path='/contact' render={() => <Contact />} />
       </Container>
     </BrowserRouter>
   )

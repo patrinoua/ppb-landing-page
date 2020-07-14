@@ -17,7 +17,10 @@ export const SectionContainer = styled.div`
     background: transparent; /* Optional: just make scrollbar invisible */
   }
 `
-
+export const StyledALink = styled.a`
+color: black;
+text-decoration: none;
+`
 export const ScrollFullContainer = styled.div`
   max-width: 600px;
   height: 100%;
