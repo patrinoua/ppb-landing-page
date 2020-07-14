@@ -24,9 +24,13 @@ app.post('/email', (req, res) => {
     from: 'pingpongistas@gmail.com',
     to: 'patrinoua@gmail.com',
     subject: req.body.subject,
-    email: req.body.email,
-    text: req.body.message,
-    name: req.body.name,
+    text: `
+    name: ${req.body.name},
+    email: ${req.body.email},
+    
+    message: 
+    ${req.body.message},
+      `,
   }
 
   transporter.sendMail(mailOptions, (error, info) => {

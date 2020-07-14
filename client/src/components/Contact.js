@@ -65,7 +65,7 @@ function Contact() {
           label='Message *'
           onChange={(e) => setMessage(e.target.value)}
           id='outlined-margin-none'
-          defaultValue=' '
+          defaultValue=''
           className={classes.textField}
           variant='outlined'
           margin='dense'
@@ -77,7 +77,7 @@ function Contact() {
           label='Name *'
           onChange={(e) => setName(e.target.value)}
           id='outlined-margin-dense'
-          defaultValue=' '
+          defaultValue=''
           className={classes.textField}
           variant='outlined'
           margin='dense'
@@ -87,7 +87,7 @@ function Contact() {
           label='Email *'
           onChange={(e) => setEmail(e.target.value)}
           id='outlined-margin-dense'
-          defaultValue=' '
+          defaultValue=''
           className={classes.textField}
           margin='dense'
           variant='outlined'
@@ -115,7 +115,7 @@ function Contact() {
         </Fab>
       ) : (
         <Success>
-          {success && 'Your email has been submitted successfuly! 🤩'}
+          {success && 'Your message has been submitted successfuly! 🤩'}
         </Success>
       )}
       <Error>
