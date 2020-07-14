@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const SectionContainer = styled.div`
   text-align: center;
@@ -18,8 +19,8 @@ export const SectionContainer = styled.div`
   }
 `
 export const StyledALink = styled.a`
-color: black;
-text-decoration: none;
+  color: black;
+  text-decoration: none;
 `
 export const ScrollFullContainer = styled.div`
   max-width: 600px;
@@ -83,5 +84,44 @@ export const GetInvolved = styled(Section)`
   @media (max-width: 750px) {
     // padding-right: 0;
     width: 70%;
+  }
+`
+
+export const NavigationButtonItem = styled(Link)`
+  display: flex;
+  justify-content: center;
+  width: 110px;
+  color: black;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  @media (max-width: 750px) {
+    height: 20px;
+    width: 72px;
+    margin: 0 5px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+`
+export const ButtonItem = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 110px;
+  color: black;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  @media (max-width: 750px) {
+    height: 20px;
+    width: 72px;
+    margin: 0 5px;
+    font-size: 13px;
+    flex-shrink: 0;
   }
 `

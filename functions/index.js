@@ -12,7 +12,6 @@ app.get('/timestamp-cached', (req, res) => {
   res.send(`${Date.now()}`)
 })
 app.post('/email', (req, res) => {
-  // console.log('email?', req.body.email)
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -24,8 +23,10 @@ app.post('/email', (req, res) => {
   var mailOptions = {
     from: 'pingpongistas@gmail.com',
     to: 'patrinoua@gmail.com',
-    subject: 'PingPongBuddies-email',
-    text: req.body.email,
+    subject: req.body.subject,
+    email: req.body.email,
+    text: req.body.message,
+    name: req.body.name,
   }
 
   transporter.sendMail(mailOptions, (error, info) => {

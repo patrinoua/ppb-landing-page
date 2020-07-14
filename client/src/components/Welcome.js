@@ -58,7 +58,12 @@ function Welcome() {
             <Button
               onClick={() => {
                 if (validateEmailFormat(email)) {
-                  axios.post('/email', { email })
+                  axios.post('/email', {
+                    email,
+                    subject:'sign me up email',
+                    message: 'sign me up email',
+                    name: 'no name',
+                  })
                   setSuccess(true)
                   setError(false)
                   setShowSubmitButton(false)

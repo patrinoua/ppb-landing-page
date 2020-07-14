@@ -7,21 +7,41 @@ import InputLabel from '@material-ui/core/InputLabel'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
+import { makeStyles } from '@material-ui/core/styles'
+import TextField from '@material-ui/core/TextField'
+import Fab from '@material-ui/core/Fab'
+
 import {
   SectionContainer,
   Logo,
   Description,
   Error,
   Success,
-  GetInvolved,
+  ButtonItem,
   StyledALink,
 } from './elements'
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingBottom: '20px',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: '25ch',
+  },
+}))
+
 function Contact() {
   const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [message, setMessage] = useState('')
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
   const [showSubmitButton, setShowSubmitButton] = useState(true)
+  const classes = useStyles()
 
   return (
     <SectionContainer>
@@ -38,44 +58,70 @@ function Contact() {
         <br />
         <h4>Or write a message below</h4>
         <br /> <br />
-        Box, send button
-        <br />
       </Description>
-      <GetInvolved>
-        <FormControl fullWidth>
-          <InputLabel htmlFor='my-input'>Email address</InputLabel>
-          <Input
-            onChange={(e) => setEmail(e.target.value)}
-            fullWidth
-            id='my-input'
-            aria-describedby='my-helper-text'
-            placeholder='E-mail'
-            autoCapitalize='none'
-          />
-          <FormHelperText id='my-helper-text'>
-            We'll never share your email.
-          </FormHelperText>
-          {showSubmitButton ? (
-            <Button
-              onClick={() => {
-                if (validateEmailFormat(email)) {
-                  axios.post('/email', { email })
-                  setSuccess(true)
-                  setError(false)
-                  setShowSubmitButton(false)
-                } else setError(true)
-              }}
-            >
-              Submit
-            </Button>
-          ) : (
-            <Success>
-              {success && 'Your email has been submitted successfuly! 🤩'}
-            </Success>
-          )}
-        </FormControl>
-      </GetInvolved>
-      <Error>{error && 'Please make sure the email format is correct'}</Error>
+
+      <div className={classes.root}>
+        <TextField
+          label='Message *'
+          onChange={(e) => setMessage(e.target.value)}
+          id='outlined-margin-none'
+          defaultValue=' '
+          className={classes.textField}
+          variant='outlined'
+          margin='dense'
+          multiline
+          rows={4}
+        />
+        <br />
+        <TextField
+          label='Name *'
+          onChange={(e) => setName(e.target.value)}
+          id='outlined-margin-dense'
+          defaultValue=' '
+          className={classes.textField}
+          variant='outlined'
+          margin='dense'
+        />
+        <br />
+        <TextField
+          label='Email *'
+          onChange={(e) => setEmail(e.target.value)}
+          id='outlined-margin-dense'
+          defaultValue=' '
+          className={classes.textField}
+          margin='dense'
+          variant='outlined'
+        />
+      </div>
+      {showSubmitButton ? (
+        <Fab
+          width='130px'
+          variant='extended'
+          onClick={() => {
+            if (validateEmailFormat(email) && name && message) {
+              axios.post('/email', {
+                email,
+                name,
+                message,
+                subject: 'Contact me message',
+              })
+              setSuccess(true)
+              setError(false)
+              setShowSubmitButton(false)
+            } else setError(true)
+          }}
+        >
+          <ButtonItem to='/contact'>Send</ButtonItem>
+        </Fab>
+      ) : (
+        <Success>
+          {success && 'Your email has been submitted successfuly! 🤩'}
+        </Success>
+      )}
+      <Error>
+        {error &&
+          'Please make sure the email format is correct and all the fields are filled'}
+      </Error>
     </SectionContainer>
   )
 }
