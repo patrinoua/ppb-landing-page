@@ -20,18 +20,26 @@ import {
   Success,
   ButtonItem,
   StyledALink,
+  TextContainer,
 } from './elements'
+import { pink } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     paddingBottom: '20px',
+    // background: 'pink',
+    height: 'auto',
+    minHeight: '280px',
+    minWidth: '280px',
+    width: '400px',
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '25ch',
+    width: '23ch',
+    maxWidth: '90%',
   },
 }))
 
@@ -47,19 +55,18 @@ function Contact() {
   return (
     <SectionContainer>
       <ScrollFullContainer>
-        <Logo src='pingpongbudsLogo1.png' />
-        <Description>
-          This project is created by Angeliki
-          <br />
+        {/* <Logo src='pingpongbudsLogo1.png' /> */}
+        <TextContainer>
+          This project is created by
           <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-            angelikipatrinou.com
+            Angeliki
           </StyledALink>
           <br />
           Get in touch on patrinoua [at] gmail.com
           <br />
           Or write a message below
           <br /> <br />
-        </Description>
+        </TextContainer>
 
         <div className={classes.root}>
           <TextField

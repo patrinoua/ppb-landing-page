@@ -38,7 +38,10 @@ function NextSteps() {
         from you!
       </p>
       <br />
-      <Fab variant='extended'>
+      <Fab
+        variant='extended'
+        style={{ width: '170px', marginLeft: '10px', marginTop: '20px' }}
+      >
         <NavigationButtonItem to='/contact'>Contact</NavigationButtonItem>
       </Fab>
     </SectionContainer>

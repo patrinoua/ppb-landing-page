@@ -5,17 +5,20 @@ const ImagesContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  // align-items: center;
   @media (max-width: 750px) {
     flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
   }
 `
 const Image = styled.div`
-  width: 290px;
-  height: 500px;
+  width: 254px;
+  height: 450px;
   background: whitesmoke;
   // border: 1px solid black;
-  margin: 10px;
+  margin: 20px;
+  margin-top: 150px;
   flex-shrink: 0;
   margin-top: 20px;
   flex-direction: row;
@@ -28,6 +31,7 @@ const Image = styled.div`
     width: 85%;
     height: 90%;
     font-size: 14px;
+    margin: 10px;
   }
 `
 function Screenshots() {
