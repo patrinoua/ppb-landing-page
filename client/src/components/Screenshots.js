@@ -11,14 +11,19 @@ const ImagesContainer = styled.div`
   }
 `
 const Image = styled.div`
-  width: 350px;
+  width: 290px;
   height: 500px;
   background: whitesmoke;
-  border: 2px solid black;
+  // border: 1px solid black;
   margin: 10px;
   flex-shrink: 0;
   margin-top: 20px;
   flex-direction: row;
+  background-position: center center;
+  background-size: contain;
+  background-image: ${({ image }) => `url(./assets/screenshots/${image})`};
+  background-repeat: no-repeat;
+  box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   @media (max-width: 400px) {
     width: 85%;
     height: 90%;
@@ -26,11 +31,19 @@ const Image = styled.div`
   }
 `
 function Screenshots() {
-  const images = ['1', '2', '3', '4', '6']
+  const images = [
+    'IMG_5105.PNG',
+    'IMG_5106.PNG',
+    'IMG_5109.PNG',
+    'IMG_5110.PNG',
+    'IMG_5115.PNG',
+    'IMG_5114.PNG',
+    'IMG_5111.PNG',
+  ]
   return (
     <ImagesContainer>
       {images.map((image) => (
-        <Image>{image}</Image>
+        <Image image={image} />
       ))}
     </ImagesContainer>
   )
