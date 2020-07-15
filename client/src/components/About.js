@@ -16,7 +16,7 @@ import {
   GetInvolved,
 } from './elements'
 
-function Welcome() {
+function About() {
   const [email, setEmail] = useState('')
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -24,7 +24,7 @@ function Welcome() {
 
   return (
     <SectionContainer>
-      <Logo src='pingpongbudsLogo1.png' />
+      <Logo />
       <Description>
         PingPongBuddies is a mobile application that connects people who want to
         play ping pong!
@@ -60,7 +60,7 @@ function Welcome() {
                 if (validateEmailFormat(email)) {
                   axios.post('/email', {
                     email,
-                    subject:'sign me up email',
+                    subject: 'sign me up email',
                     message: 'sign me up email',
                     name: 'no name',
                   })
@@ -84,4 +84,4 @@ function Welcome() {
   )
 }
 
-export default Welcome
+export default About

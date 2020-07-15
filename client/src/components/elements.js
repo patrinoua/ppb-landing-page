@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const SectionContainer = styled.div`
-  text-align: center;
+  // text-align: center;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -11,11 +11,16 @@ export const SectionContainer = styled.div`
   font-size: calc(10px + 2vmin);
   margin-top: 20px;
   padding: 10px;
-  padding-bottom: 50px;
   overflow: scroll;
+  font-size: 18px;
   ::-webkit-scrollbar {
     width: 0px; /* Remove scrollbar space */
     background: transparent; /* Optional: just make scrollbar invisible */
+  }
+  @media (max-width: 750px) {
+    width: 85%;
+
+    font-size: 16px;
   }
 `
 export const StyledALink = styled.a`
@@ -25,8 +30,11 @@ export const StyledALink = styled.a`
 export const ScrollFullContainer = styled.div`
   max-width: 600px;
   height: 100%;
-  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
   font-size: 18px;
+  overflow: scroll;
   ::-webkit-scrollbar {
     width: 0px; /* Remove scrollbar space */
     background: transparent; /* Optional: just make scrollbar invisible */
@@ -42,14 +50,19 @@ export const Section = styled.div`
   align-items: center;
   max-width: 90%;
   @media (max-width: 750px) {
-    width: 85%;
     height: auto;
     min-height: auto;
-    font-size: 14px;
+    font-size: 16px;
   }
 `
-export const Logo = styled.img`
+export const Logo = styled.div`
+  width: 90%;
   max-width: 500px;
+  height: 300px;
+  background-image: url('pingpongbudsLogo1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   @media (max-width: 750px) {
     width: 90%;
   }
@@ -60,7 +73,6 @@ export const Description = styled(Section)`
   text-align: start;
   max-width: 500px;
   line-height: 1.6;
-  font-size: 18px;
   min-height: 270px;
   @media (max-width: 750px) {
     min-height: auto;

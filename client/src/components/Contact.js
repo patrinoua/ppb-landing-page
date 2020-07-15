@@ -13,6 +13,7 @@ import Fab from '@material-ui/core/Fab'
 
 import {
   SectionContainer,
+  ScrollFullContainer,
   Logo,
   Description,
   Error,
@@ -45,83 +46,84 @@ function Contact() {
 
   return (
     <SectionContainer>
-      <Logo src='pingpongbudsLogo1.png' />
-      <Description>
-        This project is created by Angeliki Patrinou
-        <br />
-        <h4>Portfolio Webpage </h4>
-        <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-          angelikipatrinou.com{' '}
-        </StyledALink>
-        <br />
-        <h4>Get in touch on</h4>patrinoua [at] gmail.com
-        <br />
-        <h4>Or write a message below</h4>
-        <br /> <br />
-      </Description>
+      <ScrollFullContainer>
+        <Logo src='pingpongbudsLogo1.png' />
+        <Description>
+          This project is created by Angeliki
+          <br />
+          <StyledALink href='https://angelikipatrinou.com' target='_blank'>
+            angelikipatrinou.com
+          </StyledALink>
+          <br />
+          Get in touch on patrinoua [at] gmail.com
+          <br />
+          Or write a message below
+          <br /> <br />
+        </Description>
 
-      <div className={classes.root}>
-        <TextField
-          label='Message *'
-          onChange={(e) => setMessage(e.target.value)}
-          id='outlined-margin-none'
-          defaultValue=''
-          className={classes.textField}
-          variant='outlined'
-          margin='dense'
-          multiline
-          rows={4}
-        />
-        <br />
-        <TextField
-          label='Name *'
-          onChange={(e) => setName(e.target.value)}
-          id='outlined-margin-dense'
-          defaultValue=''
-          className={classes.textField}
-          variant='outlined'
-          margin='dense'
-        />
-        <br />
-        <TextField
-          label='Email *'
-          onChange={(e) => setEmail(e.target.value)}
-          id='outlined-margin-dense'
-          defaultValue=''
-          className={classes.textField}
-          margin='dense'
-          variant='outlined'
-        />
-      </div>
-      {showSubmitButton ? (
-        <Fab
-          width='130px'
-          variant='extended'
-          onClick={() => {
-            if (validateEmailFormat(email) && name && message) {
-              axios.post('/email', {
-                email,
-                name,
-                message,
-                subject: 'Contact me message',
-              })
-              setSuccess(true)
-              setError(false)
-              setShowSubmitButton(false)
-            } else setError(true)
-          }}
-        >
-          <ButtonItem to='/contact'>Send</ButtonItem>
-        </Fab>
-      ) : (
-        <Success>
-          {success && 'Your message has been submitted successfuly! 🤩'}
-        </Success>
-      )}
-      <Error>
-        {error &&
-          'Please make sure the email format is correct and all the fields are filled'}
-      </Error>
+        <div className={classes.root}>
+          <TextField
+            label='Message *'
+            onChange={(e) => setMessage(e.target.value)}
+            id='outlined-margin-none'
+            defaultValue=''
+            className={classes.textField}
+            variant='outlined'
+            margin='dense'
+            multiline
+            rows={4}
+          />
+          <br />
+          <TextField
+            label='Name *'
+            onChange={(e) => setName(e.target.value)}
+            id='outlined-margin-dense'
+            defaultValue=''
+            className={classes.textField}
+            variant='outlined'
+            margin='dense'
+          />
+          <br />
+          <TextField
+            label='Email *'
+            onChange={(e) => setEmail(e.target.value)}
+            id='outlined-margin-dense'
+            defaultValue=''
+            className={classes.textField}
+            margin='dense'
+            variant='outlined'
+          />
+        </div>
+        {showSubmitButton ? (
+          <Fab
+            style={{ width: '170px', marginLeft: '10px', marginTop: '20px' }}
+            variant='extended'
+            onClick={() => {
+              if (validateEmailFormat(email) && name && message) {
+                axios.post('/email', {
+                  email,
+                  name,
+                  message,
+                  subject: 'Contact me message',
+                })
+                setSuccess(true)
+                setError(false)
+                setShowSubmitButton(false)
+              } else setError(true)
+            }}
+          >
+            <ButtonItem to='/contact'>Send</ButtonItem>
+          </Fab>
+        ) : (
+          <Success>
+            {success && 'Your message has been sent successfuly! 🤩'}
+          </Success>
+        )}
+        <Error>
+          {error &&
+            'Please make sure the email format is correct and all the fields are filled'}
+        </Error>
+      </ScrollFullContainer>
     </SectionContainer>
   )
 }

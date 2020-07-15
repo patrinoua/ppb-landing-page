@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Welcome from './components/Welcome'
+import About from './components/About'
 import Screenshots from './components/Screenshots'
 import NextSteps from './components/NextSteps'
 import Contact from './components/Contact'
@@ -37,8 +37,8 @@ const NavigationItem = styled(Link)`
   }
   @media (max-width: 750px) {
     height: 20px;
-    width: 72px;
-    margin: 0 5px;
+    width: auto;
+    margin: 0;
     font-size: 13px;
     flex-shrink: 0;
   }
@@ -61,14 +61,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavigationBar>
-        <NavigationItem to='/welcome'>Welcome</NavigationItem>
+        <NavigationItem to='/'>About</NavigationItem>
         <NavigationItem to='/screenshots'>Screenshots</NavigationItem>
         <NavigationItem to='/nextsteps'>Next Steps</NavigationItem>
         <NavigationItem to='/contact'>Contact</NavigationItem>
       </NavigationBar>
       <Container>
-        <Route exact path='/' render={() => <Welcome />} />
-        <Route exact path='/welcome' render={() => <Welcome />} />
+        <Route exact path='/' render={() => <About />} />
         <Route exact path='/screenshots' render={() => <Screenshots />} />
         <Route exact path='/nextsteps' render={() => <NextSteps />} />
         <Route exact path='/contact' render={() => <Contact />} />
