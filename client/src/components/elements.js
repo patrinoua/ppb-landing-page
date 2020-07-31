@@ -36,6 +36,7 @@ export const ScrollFullContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  align-items: center;
   flex-direction: column;
   padding-bottom: 50px;
   font-size: 18px;
@@ -74,10 +75,11 @@ export const Logo = styled.div`
 `
 
 export const Description = styled(Section)`
-  align-items: flex-start;
+  align-items: center;
   text-align: start;
   max-width: 500px;
   line-height: 1.6;
+  font-weight: 500;
   min-height: 270px;
   @media (max-width: 750px) {
     min-height: 200px;
