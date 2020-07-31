@@ -26,17 +26,17 @@ function About() {
     <SectionContainer>
       <Logo />
       <Description>
-        PingPongBuddies is a mobile application that connects people who want to
-        play ping pong!
+        Play with other people in your area!
         <br />
         <br />
+        {/* <br />
         ✓ One on one interactions
         <br />
         ✓ Distance
         <br />
         ✓ Chat
-        <br /> <br />
-        Leave your email below and we'll let you know once it's live!
+        <br /> <br /> */}
+        Leave your email here to know first when it's live!
         <br />
         <br />
       </Description>
@@ -70,7 +70,7 @@ function About() {
                 } else setError(true)
               }}
             >
-              Submit
+              OK! Keep me posted
             </Button>
           ) : (
             <Success>
