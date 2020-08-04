@@ -7,7 +7,7 @@ export const SectionContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   margin-top: 20px;
@@ -65,7 +65,7 @@ export const Section = styled.div`
 export const Logo = styled.div`
   width: 90%;
   max-width: 500px;
-  height: 300px;
+  height: 25vh;
   background-image: url('pingpongbudsLogo1.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -84,6 +84,13 @@ export const Description = styled(Section)`
   min-height: 270px;
   @media (max-width: 750px) {
     min-height: 200px;
+  }
+`
+export const AboutSection = styled(Description)`
+  height: auto;
+  min-height: auto;
+  @media (max-width: 750px) {
+    min-height: auto;
   }
 `
 
@@ -108,7 +115,7 @@ export const GetInvolved = styled(Section)`
   // background: pink;
   @media (max-width: 750px) {
     // padding-right: 0;
-    width: 70%;
+    width: 80%;
   }
 `
 

@@ -10,10 +10,10 @@ import validateEmailFormat from '../utils/validateEmailFormat'
 import {
   SectionContainer,
   Logo,
-  Description,
   Error,
   Success,
   GetInvolved,
+  AboutSection,
 } from './elements'
 
 function About() {
@@ -25,21 +25,13 @@ function About() {
   return (
     <SectionContainer>
       <Logo />
-      <Description>
+      <AboutSection>
         Play with other people in your area!
         <br />
-        <br />
-        {/* <br />
-        ✓ One on one interactions
-        <br />
-        ✓ Distance
-        <br />
-        ✓ Chat
-        <br /> <br /> */}
         Leave your email here to know first when it's live!
         <br />
         <br />
-      </Description>
+      </AboutSection>
       <GetInvolved>
         <FormControl fullWidth>
           <InputLabel htmlFor='my-input'>Email address</InputLabel>
@@ -60,9 +52,9 @@ function About() {
                 if (validateEmailFormat(email)) {
                   axios.post('/email', {
                     email,
-                    subject: 'sign me up email',
-                    message: 'sign me up email',
-                    name: 'no name',
+                    subject: 'Sign me up email',
+                    message: 'Sign me up email',
+                    name: '',
                   })
                   setSuccess(true)
                   setError(false)
@@ -80,6 +72,13 @@ function About() {
         </FormControl>
       </GetInvolved>
       <Error>{error && 'Please make sure the email format is correct'}</Error>
+      {error &&
+        axios.post('/email', {
+          email,
+          subject: 'Error on Sign me up email',
+          message: error,
+          name: '',
+        })}
     </SectionContainer>
   )
 }
