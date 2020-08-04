@@ -87,10 +87,9 @@ export const Description = styled(Section)`
   }
 `
 export const AboutSection = styled(Description)`
-  height: auto;
-  min-height: auto;
+  min-height: 200px;
   @media (max-width: 750px) {
-    min-height: auto;
+    min-height: 150px;
   }
 `
 

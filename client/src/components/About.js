@@ -32,7 +32,7 @@ function About() {
         <br />
         <br />
       </AboutSection>
-      <GetInvolved>
+      <GetInvolved style={{ maxWidth: '350px' }}>
         <FormControl fullWidth>
           <InputLabel htmlFor='my-input'>Email address</InputLabel>
           <Input
