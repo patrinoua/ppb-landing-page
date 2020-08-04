@@ -29,7 +29,8 @@ export const SectionContainer = styled.div`
 `
 export const StyledALink = styled.a`
   color: black;
-  text-decoration: none;
+  // text-decoration: none;
+  display: inline;
 `
 export const ScrollFullContainer = styled.div`
   max-width: 600px;
