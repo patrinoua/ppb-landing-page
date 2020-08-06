@@ -28,6 +28,8 @@ function About() {
       <AboutSection>
         Play with other people in your area!
         <br />
+        <h1>Coming on August 15th! </h1>
+        <br />
         Leave your email here to know first when it's live!
         <br />
         <br />
