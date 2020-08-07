@@ -6,6 +6,7 @@ import About from './components/About'
 import Screenshots from './components/Screenshots'
 import NextSteps from './components/NextSteps'
 import Contact from './components/Contact'
+import Policy from './components/Policy'
 
 const NavigationBar = styled.div`
   width: 100%;
@@ -71,6 +72,7 @@ function App() {
         <Route exact path='/screenshots' render={() => <Screenshots />} />
         <Route exact path='/nextsteps' render={() => <NextSteps />} />
         <Route exact path='/contact' render={() => <Contact />} />
+        <Route exact path='/policy' render={() => <Policy />} />
       </Container>
     </BrowserRouter>
   )
