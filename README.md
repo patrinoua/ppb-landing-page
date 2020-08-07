@@ -13,9 +13,10 @@ to run:
 firebase serve --only functions,hosting
 ```
 
-if you make changes you need to run: 
+if you make changes you need to run:
 
 ```
+cd client
 npm run build
 firebase serve --only functions,hosting
 ```
