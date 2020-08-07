@@ -13,7 +13,14 @@ to run:
 firebase serve --only functions,hosting
 ```
 
-to run only frontend:
+if you make changes you need to run: 
+
+```
+npm run build
+firebase serve --only functions,hosting
+```
+
+to run only Frontend:
 
 ```
 cd client
