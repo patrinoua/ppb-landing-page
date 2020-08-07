@@ -109,7 +109,8 @@ export const Success = styled(Section)`
 `
 export const GetInvolved = styled(Section)`
   height: 10%;
-  max-width: 450px;
+  max-width: 350px;
+  min-height: 140px;
   padding-right: 50px;
   // background: pink;
   @media (max-width: 750px) {

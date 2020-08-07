@@ -4,14 +4,16 @@ const nodemailer = require('nodemailer')
 
 const app = express()
 
-app.get('/timestamp', (req, res) => {
+app.get('/server/timestamp', (req, res) => {
   res.send(`${Date.now()}`)
 })
+
 app.get('/timestamp-cached', (req, res) => {
   res.set('Cache-Control', 'public, max-age=300, s-maxage=600')
   res.send(`${Date.now()}`)
 })
-app.post('/email', (req, res) => {
+
+app.post('/server/email', (req, res) => {
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -40,7 +42,6 @@ app.post('/email', (req, res) => {
       console.log('Email sent!: ' + info.response)
     }
   })
-  // res.send({ reports })
 })
 
 exports.app = functions.https.onRequest(app)

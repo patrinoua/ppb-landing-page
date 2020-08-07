@@ -22,6 +22,22 @@ function About() {
   const [success, setSuccess] = useState(false)
   const [showSubmitButton, setShowSubmitButton] = useState(true)
 
+  const sendSignUpMail = () => {
+    axios.post('/server/email', {
+      email,
+      subject: 'Sign me up!',
+      message: 'Sign me up email',
+      name: '',
+    })
+  }
+  const sendErrorMail = () => {
+    axios.post('/email', {
+      email,
+      subject: 'Error on Sign me up email',
+      message: error,
+      name: '',
+    })
+  }
   return (
     <SectionContainer>
       <Logo />
@@ -34,7 +50,7 @@ function About() {
         <br />
         <br />
       </AboutSection>
-      <GetInvolved style={{ maxWidth: '350px' }}>
+      <GetInvolved>
         <FormControl fullWidth>
           <InputLabel htmlFor='my-input'>Email address</InputLabel>
           <Input
@@ -52,16 +68,14 @@ function About() {
             <Button
               onClick={() => {
                 if (validateEmailFormat(email)) {
-                  axios.post('/email', {
-                    email,
-                    subject: 'Sign me up email',
-                    message: 'Sign me up email',
-                    name: '',
-                  })
+                  sendSignUpMail()
                   setSuccess(true)
-                  setError(false)
                   setShowSubmitButton(false)
-                } else setError(true)
+                  setError(false)
+                } else {
+                  setError(true)
+                  sendErrorMail()
+                }
               }}
             >
               OK! Keep me posted
@@ -72,15 +86,8 @@ function About() {
             </Success>
           )}
         </FormControl>
+        <Error>{error && 'Please make sure the email format is correct'}</Error>
       </GetInvolved>
-      <Error>{error && 'Please make sure the email format is correct'}</Error>
-      {error &&
-        axios.post('/email', {
-          email,
-          subject: 'Error on Sign me up email',
-          message: error,
-          name: '',
-        })}
     </SectionContainer>
   )
 }
