@@ -63,3 +63,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+/client/build/asset-manifest.json
+client/build/index.html
+client/build/manifest.json
+client/build/service-worker.js
+client/public/manifest.json
+client/public/policy.html
