@@ -7,7 +7,7 @@ yarn-error.log*
 firebase-debug.log*
 # Firebase cache
 .firebase/
-client/build
+client/build/
 .DS_Store
 # Firebase config
 
@@ -68,4 +68,3 @@ client/build/index.html
 client/build/manifest.json
 client/build/service-worker.js
 client/public/manifest.json
-client/public/policy.html
