@@ -103,6 +103,7 @@ export const Error = styled(Section)`
   height: 50px;
   font-size: 16px;
   color: red;
+  max-width: 100%;
 `
 export const Success = styled(Section)`
   height: 35px;
