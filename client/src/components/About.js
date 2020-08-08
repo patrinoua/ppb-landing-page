@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 import FormHelperText from '@material-ui/core/FormHelperText'
+import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import {
@@ -18,6 +19,7 @@ import {
 
 function About() {
   const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
   const [showSubmitButton, setShowSubmitButton] = useState(true)
@@ -25,9 +27,9 @@ function About() {
   const sendSignUpMail = () => {
     axios.post('/server/email', {
       email,
+      name,
       subject: 'Sign me up!',
       message: 'Sign me up email',
-      name: '',
     })
   }
   const sendErrorMail = () => {
@@ -43,50 +45,74 @@ function About() {
       <Logo />
       <AboutSection>
         Play with other people in your area!
-        <br />
         <h1>Coming on August 15th! </h1>
-        <br />
-        Leave your email here to know first when it's live!
-        <br />
+        <p>Leave your email here to know first when it's live!</p>
         <br />
       </AboutSection>
       <GetInvolved>
         <FormControl fullWidth>
-          <InputLabel htmlFor='my-input'>Email address</InputLabel>
-          <Input
-            onChange={(e) => setEmail(e.target.value)}
-            fullWidth
-            id='my-input'
-            aria-describedby='my-helper-text'
-            placeholder='E-mail'
+          <TextField
+            style={{ marginTop: '20px' }}
+            id='email'
+            label='E-mail'
+            onChange={(e) => {
+              setEmail(e.target.value)
+              setError(false)
+            }}
             autoCapitalize='none'
           />
           <FormHelperText id='my-helper-text'>
             We'll never share your email.
           </FormHelperText>
-          {showSubmitButton ? (
-            <Button
-              onClick={() => {
-                if (validateEmailFormat(email)) {
-                  sendSignUpMail()
-                  setSuccess(true)
-                  setShowSubmitButton(false)
-                  setError(false)
-                } else {
-                  setError(true)
-                  sendErrorMail()
-                }
-              }}
-            >
-              OK! Keep me posted
-            </Button>
-          ) : (
-            <Success>
-              {success && 'Your email has been submitted successfuly! 🤩'}
-            </Success>
-          )}
+          <TextField
+            style={{ marginTop: '20px' }}
+            id='name'
+            label='Name (Optional)'
+            onChange={(e) => setName(e.target.value)}
+          />
+          <div
+            style={{
+              height: '60px',
+              display: 'flex',
+              justifyContent: 'flexStart',
+              alignItems: 'center',
+              flexDirection: 'column',
+            }}
+          >
+            {showSubmitButton ? (
+              <Button
+                style={{
+                  marginTop: '10px',
+                  marginBottom: '10px',
+                }}
+                onClick={() => {
+                  if (validateEmailFormat(email.trim())) {
+                    sendSignUpMail()
+                    setSuccess(true)
+                    setShowSubmitButton(false)
+                    setError(false)
+                  } else {
+                    setError(true)
+                    sendErrorMail()
+                  }
+                }}
+              >
+                OK! Keep me posted
+              </Button>
+            ) : (
+              <Success style={{ marginTop: '20px' }}>
+                {success && 'Your email has been submitted successfuly! 🤩'}
+              </Success>
+            )}
+            {error ? (
+              <Error>
+                {error && 'Please make sure the email format is correct'}
+              </Error>
+            ) : (
+              ''
+            )}
+          </div>
         </FormControl>
-        <Error>{error && 'Please make sure the email format is correct'}</Error>
       </GetInvolved>
     </SectionContainer>
   )

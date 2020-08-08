@@ -1,10 +1,5 @@
 import React, { useState } from 'react'
 import '../App.css'
-import Input from '@material-ui/core/Input'
-import Button from '@material-ui/core/Button'
-import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormHelperText from '@material-ui/core/FormHelperText'
 import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import { makeStyles } from '@material-ui/core/styles'
@@ -15,12 +10,12 @@ import {
   SectionContainer,
   ScrollFullContainer,
   Error,
+  Logo,
   Success,
   ButtonItem,
   StyledALink,
   TextContainer,
 } from './elements'
-import { pink } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,6 +44,7 @@ function Contact() {
 
   return (
     <SectionContainer>
+      <Logo />
       <ScrollFullContainer>
         <TextContainer>
           <div>

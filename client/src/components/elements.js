@@ -10,7 +10,7 @@ export const SectionContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  margin-top: 20px;
+  // margin-top: 20px;
   padding: 10px;
   overflow: scroll;
   font-size: 18px;
@@ -88,6 +88,7 @@ export const Description = styled(Section)`
 `
 export const AboutSection = styled(Description)`
   min-height: 200px;
+  height: 230px;
   @media (max-width: 750px) {
     min-height: 150px;
   }
@@ -106,6 +107,7 @@ export const Error = styled(Section)`
 export const Success = styled(Section)`
   height: 35px;
   font-size: 16px;
+  max-width: 100%;
 `
 export const GetInvolved = styled(Section)`
   height: 10%;
