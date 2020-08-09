@@ -15,7 +15,11 @@
     <meta property="og:title" content="PingPongBuddies" />
     <meta
       property="og:image"
-      content="https://www.dropbox.com/s/a9x7q1wtgges9o7/pingpongbuddies.png?dl=0"
+      content="https://scontent.ftxl2-1.fna.fbcdn.net/v/t1.0-9/117236042_10157815053620000_8398259254186311913_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_eui2=AeFwLDHG-8wlmK0v_0Hngr9p2UPM-GJf4RfZQ8z4Yl_hFxt0YPDfWFimZIph8zxEh2g&_nc_ohc=OPvLl0pbx2QAX8RCaiW&_nc_oc=AQnEGyHJ8qzgco4Hohz3PfBC1_2LRDwNAjbR6bkuP9xXXe4UfKBPfBIAB7w5-R0UVD4&_nc_ht=scontent.ftxl2-1.fna&oh=09550d357cb2ea47c114748a51b44b1f&oe=5F52B49E"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://scontent.ftxl2-1.fna.fbcdn.net/v/t1.0-9/117236042_10157815053620000_8398259254186311913_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_eui2=AeFwLDHG-8wlmK0v_0Hngr9p2UPM-GJf4RfZQ8z4Yl_hFxt0YPDfWFimZIph8zxEh2g&_nc_ohc=OPvLl0pbx2QAX8RCaiW&_nc_oc=AQnEGyHJ8qzgco4Hohz3PfBC1_2LRDwNAjbR6bkuP9xXXe4UfKBPfBIAB7w5-R0UVD4&_nc_ht=scontent.ftxl2-1.fna&oh=09550d357cb2ea47c114748a51b44b1f&oe=5F52B49E"
     />
     <meta
       property="og:description"
@@ -54,5 +58,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: 'AIzaSyAiZiU-Dq0wQ6OBWxTPe4SEx89iYMbSDZY',
+        authDomain: 'ppb-firebase-hosting.firebaseapp.com',
+        databaseURL: 'https://ppb-firebase-hosting.firebaseio.com',
+        projectId: 'ppb-firebase-hosting',
+        storageBucket: 'ppb-firebase-hosting.appspot.com',
+        messagingSenderId: '1082326822329',
+        appId: '1:1082326822329:web:6b97ef26beb8bfd0015a68',
+        measurementId: 'G-605BK9G3ZF',
+      }
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig)
+      firebase.analytics()
+    </script>
   </body>
 </html>
