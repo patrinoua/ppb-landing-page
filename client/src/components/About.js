@@ -45,7 +45,7 @@ function About() {
       <Logo />
       <AboutSection>
         Play with other people in your area!
-        <h1>Coming on August 15th! </h1>
+        <h1>Coming soon! </h1>
         <p>Leave your email here to know first when it's live!</p>
         <br />
       </AboutSection>
