@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import '../App.css'
-import Input from '@material-ui/core/Input'
 import Button from '@material-ui/core/Button'
 import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
@@ -16,7 +14,7 @@ import {
   GetInvolved,
   AboutSection,
 } from './elements'
-import { Regular, H1, Prompt } from '../style-guide/typography'
+import { H1, Prompt } from '../style-guide/typography'
 function About() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
