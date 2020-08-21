@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
+import { colors } from '../style-guide/colors'
 export const SectionContainer = styled.div`
   // text-align: center;
   height: 90vh;
@@ -28,7 +28,7 @@ export const SectionContainer = styled.div`
   }
 `
 export const StyledALink = styled.a`
-  color: black;
+  color: ${colors.charcoal};
   // text-decoration: none;
   display: inline;
 `

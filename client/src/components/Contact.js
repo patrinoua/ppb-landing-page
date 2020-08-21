@@ -4,7 +4,8 @@ import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import Fab from '@material-ui/core/Fab'
+import Button from '@material-ui/core/Button'
+import { H1, Prompt } from '../style-guide/typography'
 
 import {
   SectionContainer,
@@ -47,18 +48,15 @@ function Contact() {
       <Logo />
       <ScrollFullContainer>
         <TextContainer>
-          <div>
+          <Prompt>
             This project is created by{' '}
             <StyledALink href='https://angelikipatrinou.com' target='_blank'>
               Angeliki
             </StyledALink>
-          </div>
-          <br />
-          <div>Get in touch on</div>
-          pingpongistas [at] gmail.com
-          <br />
-          <br />
-          <div>Or write a message below</div>
+          </Prompt>
+          <Prompt>Get in touch on</Prompt>
+          <Prompt> pingpongistas [at] gmail.com</Prompt>
+          <Prompt>Or using the form below :)</Prompt>
           <br />
         </TextContainer>
 
@@ -96,9 +94,10 @@ function Contact() {
           />
         </div>
         {showSubmitButton ? (
-          <Fab
-            style={{ width: '170px', marginLeft: '10px', marginTop: '20px' }}
-            variant='extended'
+          <Button
+            style={{
+              width: '170px',
+            }}
             onClick={() => {
               if (validateEmailFormat(email) && name && message) {
                 axios.post('/email', {
@@ -113,8 +112,8 @@ function Contact() {
               } else setError(true)
             }}
           >
-            <ButtonItem to='/contact'>Send</ButtonItem>
-          </Fab>
+            <Prompt to='/contact'>Send</Prompt>
+          </Button>
         ) : (
           <Success>
             {success && 'Your message has been sent successfuly! 🤩'}
