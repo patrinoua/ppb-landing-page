@@ -1,51 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../App.css'
-import Input from '@material-ui/core/Input'
-import Button from '@material-ui/core/Button'
-import FormControl from '@material-ui/core/FormControl'
-import InputLabel from '@material-ui/core/InputLabel'
-import FormHelperText from '@material-ui/core/FormHelperText'
-import axios from 'axios'
-import validateEmailFormat from '../utils/validateEmailFormat'
-import { makeStyles } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import Fab from '@material-ui/core/Fab'
 
-import {
-  SectionContainer,
-  ScrollFullContainer,
-  Error,
-  Success,
-  ButtonItem,
-  StyledALink,
-  TextContainer,
-} from './elements'
-import { pink } from '@material-ui/core/colors'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexDirection: 'column',
-    paddingBottom: '20px',
-    height: 'auto',
-    minHeight: '200px',
-    minWidth: '280px',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: '23ch',
-    maxWidth: '90%',
-  },
-}))
-
-function Contact() {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [message, setMessage] = useState('')
-  const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [showSubmitButton, setShowSubmitButton] = useState(true)
-  const classes = useStyles()
+function Policy() {
 
   return (
     <div style={{ margin: '50px', maxWidth: '1000px' }}>
@@ -838,4 +794,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Policy
