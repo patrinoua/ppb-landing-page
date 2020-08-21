@@ -5,7 +5,7 @@ import validateEmailFormat from '../utils/validateEmailFormat'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import { H1, Prompt } from '../style-guide/typography'
+import { Prompt } from '../style-guide/typography'
 
 import {
   SectionContainer,
@@ -13,7 +13,6 @@ import {
   Error,
   Logo,
   Success,
-  ButtonItem,
   StyledALink,
   TextContainer,
 } from './elements'
