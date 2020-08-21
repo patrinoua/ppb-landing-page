@@ -7,6 +7,8 @@ import Screenshots from './components/Screenshots'
 import NextSteps from './components/NextSteps'
 import Contact from './components/Contact'
 import Policy from './components/Policy'
+import { NavigationText } from './style-guide/typography'
+import { colors } from './style-guide/colors'
 
 const NavigationBar = styled.div`
   width: 100%;
@@ -22,19 +24,16 @@ const NavigationBar = styled.div`
 const NavigationItem = styled(Link)`
   display: flex;
   justify-content: center;
-  width: 110px;
-  color: black;
-  border-bottom: 2px solid black;
+  width: 100px;
+  background: ${colors.charcoal};
+  
   padding: 10px;
   padding-bottom: 5px;
   margin: 0 15px;
   text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  line-height: 1.6;
   &: hover {
     cursor: pointer;
-    background: whitesmoke;
+    background: #08ccaa;
   }
   @media (max-width: 750px) {
     height: 20px;
@@ -62,10 +61,18 @@ function App() {
   return (
     <BrowserRouter>
       <NavigationBar>
-        <NavigationItem to='/'>About</NavigationItem>
-        <NavigationItem to='/screenshots'>Screenshots</NavigationItem>
-        <NavigationItem to='/nextsteps'>Next Steps</NavigationItem>
-        <NavigationItem to='/contact'>Contact</NavigationItem>
+        <NavigationItem to='/'>
+          <NavigationText>About</NavigationText>
+        </NavigationItem>
+        <NavigationItem to='/screenshots'>
+          <NavigationText>Screenshots</NavigationText>
+        </NavigationItem>
+        <NavigationItem to='/nextsteps'>
+          <NavigationText>Next Steps</NavigationText>
+        </NavigationItem>
+        <NavigationItem to='/contact'>
+          <NavigationText>Contact</NavigationText>
+        </NavigationItem>
       </NavigationBar>
       <Container>
         <Route exact path='/' render={() => <About />} />
