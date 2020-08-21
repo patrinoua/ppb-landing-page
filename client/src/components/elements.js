@@ -66,7 +66,8 @@ export const Logo = styled.div`
   width: 90%;
   max-width: 500px;
   height: 25vh;
-  background-image: url('pingpongbudsLogo1.png');
+  max-height: 250px;
+  background-image: url('logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -112,7 +113,7 @@ export const Success = styled(Section)`
 `
 export const GetInvolved = styled(Section)`
   height: 10%;
-  max-width: 350px;
+  max-width: 300px;
   min-height: 140px;
   padding-right: 50px;
   // background: pink;

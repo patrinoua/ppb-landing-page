@@ -16,7 +16,7 @@ import {
   GetInvolved,
   AboutSection,
 } from './elements'
-
+import { Regular, H1, Prompt } from '../style-guide/typography'
 function About() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -44,15 +44,15 @@ function About() {
     <SectionContainer>
       <Logo />
       <AboutSection>
-        Play with other people in your area!
-        <h1>Coming soon! </h1>
-        <p>Leave your email here to know first when it's live!</p>
+        <Prompt>Play with other people in your area!</Prompt>
+        <H1>Coming soon! </H1>
+        <Prompt>Leave your email here to know first when it's live!</Prompt>
         <br />
       </AboutSection>
       <GetInvolved>
         <FormControl fullWidth>
           <TextField
-            style={{ marginTop: '20px' }}
+            style={{ fontFamily: 'Open Sans', marginTop: '20px' }}
             id='email'
             label='E-mail'
             onChange={(e) => {
@@ -61,11 +61,14 @@ function About() {
             }}
             autoCapitalize='none'
           />
-          <FormHelperText id='my-helper-text'>
+          <FormHelperText
+            id='my-helper-text'
+            style={{ fontFamily: 'Open Sans' }}
+          >
             We'll never share your email.
           </FormHelperText>
           <TextField
-            style={{ marginTop: '20px' }}
+            style={{ fontFamily: 'Open Sans' }}
             id='name'
             label='Name (Optional)'
             onChange={(e) => setName(e.target.value)}
@@ -97,7 +100,7 @@ function About() {
                   }
                 }}
               >
-                OK! Keep me posted
+                <Prompt>OK! Keep me posted</Prompt>
               </Button>
             ) : (
               <Success style={{ marginTop: '20px' }}>
