@@ -47,16 +47,3 @@ export const Subtitle = styled.div`
   line-height: 21px;
   color: ${({ color }) => color || colors.mediumGray};
 `
-
-export const NavigationText = styled.div`
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  color: white;
-  letter-spacing: 0.05px;
-  &: hover {
-    cursor: pointer;
-    color: black;
-  }
-`
