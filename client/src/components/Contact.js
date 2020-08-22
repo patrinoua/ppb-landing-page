@@ -9,7 +9,7 @@ import { Prompt } from '../style-guide/typography'
 
 import {
   SectionContainer,
-  ScrollFullContainer,
+  // ScrollFullContainer,
   Error,
   Logo,
   Success,
