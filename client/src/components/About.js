@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../App.css'
 import Button from '@material-ui/core/Button'
 import FormControl from '@material-ui/core/FormControl'
 import FormHelperText from '@material-ui/core/FormHelperText'
@@ -13,8 +12,10 @@ import {
   Success,
   GetInvolved,
   AboutSection,
+  AvailableOn,
 } from './elements'
 import { H1, Prompt } from '../style-guide/typography'
+
 function About() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -43,9 +44,15 @@ function About() {
       <Logo />
       <AboutSection>
         <Prompt>Play with other people in your area!</Prompt>
-        <H1>Coming soon! </H1>
-        <Prompt>Leave your email here to know first when it's live!</Prompt>
+        <H1>Available on</H1>
+        <a
+          href='https://play.google.com/store/apps/details?id=com.patrinoua.PingPongBuds'
+          target='_blank'
+        >
+          <AvailableOn />
+        </a>
         <br />
+        <Prompt>Leave your email if you wanna get the latest updates!</Prompt>
         <br />
       </AboutSection>
       <GetInvolved>

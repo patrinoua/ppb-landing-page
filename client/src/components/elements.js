@@ -1,6 +1,23 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { colors } from '../style-guide/colors'
+
+export const Logo = styled.div`
+  width: 90%;
+  max-width: 500px;
+  // height: 25vh;
+  min-height: 200px;
+  max-height: 450px;
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (max-width: 450px) {
+    width: 90%;
+    min-height: 110px;
+  }
+`
+
 export const SectionContainer = styled.div`
   height: 90vh;
   width: 100%;
@@ -19,9 +36,6 @@ export const SectionContainer = styled.div`
   }
   @media (max-width: 750px) {
     width: 85%;
-    // margin-top: 0;
-    // padding: 0px;
-
     font-size: 16px;
   }
 `
@@ -60,20 +74,6 @@ export const Section = styled.div`
     font-size: 16px;
   }
 `
-export const Logo = styled.div`
-  width: 90%;
-  max-width: 500px;
-  height: 25vh;
-  min-height: 200px;
-  max-height: 450px;
-  background-image: url('logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  @media (max-width: 750px) {
-    width: 90%;
-  }
-`
 
 export const Description = styled(Section)`
   align-items: center;
@@ -86,11 +86,20 @@ export const Description = styled(Section)`
     min-height: 200px;
   }
 `
-export const AboutSection = styled(Description)`
-  min-height: 200px;
-  height: 230px;
-  @media (max-width: 750px) {
+export const AboutSection = styled.div`
+  width: 100%;
+  max-width: 90%;
+  height: 33.33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 270px;
+  flex-shrink: 0;
+  @media (max-width: 450px) {
     min-height: 150px;
+    height: auto;
+    margin: 10px 0;
   }
 `
 
@@ -111,13 +120,10 @@ export const Success = styled(Section)`
   max-width: 100%;
 `
 export const GetInvolved = styled(Section)`
-  height: 10%;
+  height: 20%;
   max-width: 300px;
   min-height: 140px;
-  padding-right: 50px;
-  // background: pink;
-  @media (max-width: 750px) {
-    // padding-right: 0;
+  @media (max-width: 450px) {
     width: 80%;
   }
 `
@@ -159,4 +165,12 @@ export const ButtonItem = styled.div`
     font-size: 13px;
     flex-shrink: 0;
   }
+`
+export const AvailableOn = styled.div`
+  width: 400px;
+  height: 100px;
+  background-image: url('assets/GooglePlay.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 `
