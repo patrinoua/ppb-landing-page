@@ -46,6 +46,7 @@ function About() {
         <H1>Coming soon! </H1>
         <Prompt>Leave your email here to know first when it's live!</Prompt>
         <br />
+        <br />
       </AboutSection>
       <GetInvolved>
         <FormControl fullWidth>

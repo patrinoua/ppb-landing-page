@@ -8,6 +8,7 @@ export const H1 = styled.div`
   line-height: 34px;
   color: ${colors.charcoal};
   font-style: normal;
+  margin: 20px 0;
   // letter-spacing: 0.05em;
 `
 export const H2 = styled.div`

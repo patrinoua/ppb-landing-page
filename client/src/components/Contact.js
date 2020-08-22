@@ -14,7 +14,6 @@ import {
   Logo,
   Success,
   StyledALink,
-  TextContainer,
 } from './elements'
 
 const useStyles = makeStyles((theme) => ({
@@ -46,19 +45,6 @@ function Contact() {
     <SectionContainer>
       <Logo />
       <ScrollFullContainer>
-        <TextContainer>
-          <Prompt>
-            This project is created by{' '}
-            <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-              Angeliki
-            </StyledALink>
-          </Prompt>
-          <Prompt>Get in touch on</Prompt>
-          <Prompt> pingpongistas [at] gmail.com</Prompt>
-          <Prompt>Or using the form below :)</Prompt>
-          <br />
-        </TextContainer>
-
         <div className={classes.root}>
           <TextField
             label='Message *'
@@ -122,6 +108,14 @@ function Contact() {
           {error &&
             'Please make sure the email format is correct and all the fields are filled'}
         </Error>
+        <Prompt> pingpongistas [at] gmail.com</Prompt>
+
+        <Prompt>
+          This project is created by{' '}
+          <StyledALink href='https://angelikipatrinou.com' target='_blank'>
+            Angeliki
+          </StyledALink>
+        </Prompt>
       </ScrollFullContainer>
     </SectionContainer>
   )
