@@ -39,6 +39,10 @@ export const Prompt = styled.div`
   line-height: 24px;
   color: ${colors.charcoal};
   margin: 30px 0;
+  @media (max-width: 450px) {
+    font-size: 16px;
+    margin: 10px 0;
+  }
 `
 export const Subtitle = styled.div`
   font-family: 'Open Sans', sans-serif;

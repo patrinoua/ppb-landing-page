@@ -45,6 +45,10 @@ function Contact() {
     <SectionContainer>
       <Logo />
       {/* <ScrollFullContainer> */}
+      <Error>
+        {error &&
+          'Please make sure the email format is correct and all the fields are filled'}
+      </Error>
       <div className={classes.root}>
         <TextField
           label='Message *'
@@ -104,12 +108,8 @@ function Contact() {
           {success && 'Your message has been sent successfuly! 🤩'}
         </Success>
       )}
-      <Error>
-        {error &&
-          'Please make sure the email format is correct and all the fields are filled'}
-      </Error>
-      <Prompt> pingpongistas [at] gmail.com</Prompt>
 
+      <Prompt> pingpongistas [at] gmail.com</Prompt>
       <Prompt>
         This project is created by{' '}
         <StyledALink href='https://angelikipatrinou.com' target='_blank'>
