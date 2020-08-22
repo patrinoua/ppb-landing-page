@@ -44,79 +44,79 @@ function Contact() {
   return (
     <SectionContainer>
       <Logo />
-      <ScrollFullContainer>
-        <div className={classes.root}>
-          <TextField
-            label='Message *'
-            onChange={(e) => setMessage(e.target.value)}
-            id='outlined-margin-none'
-            defaultValue=''
-            className={classes.textField}
-            variant='outlined'
-            margin='dense'
-            multiline
-            rows={4}
-          />
-          <br />
-          <TextField
-            label='Name *'
-            onChange={(e) => setName(e.target.value)}
-            id='outlined-margin-dense'
-            defaultValue=''
-            className={classes.textField}
-            variant='outlined'
-            margin='dense'
-          />
-          <br />
-          <TextField
-            label='Email *'
-            onChange={(e) => setEmail(e.target.value)}
-            id='outlined-margin-dense'
-            defaultValue=''
-            className={classes.textField}
-            margin='dense'
-            variant='outlined'
-          />
-        </div>
-        {showSubmitButton ? (
-          <Button
-            style={{
-              width: '170px',
-            }}
-            onClick={() => {
-              if (validateEmailFormat(email) && name && message) {
-                axios.post('/email', {
-                  email,
-                  name,
-                  message,
-                  subject: 'Contact me message',
-                })
-                setSuccess(true)
-                setError(false)
-                setShowSubmitButton(false)
-              } else setError(true)
-            }}
-          >
-            <Prompt to='/contact'>Send</Prompt>
-          </Button>
-        ) : (
-          <Success>
-            {success && 'Your message has been sent successfuly! 🤩'}
-          </Success>
-        )}
-        <Error>
-          {error &&
-            'Please make sure the email format is correct and all the fields are filled'}
-        </Error>
-        <Prompt> pingpongistas [at] gmail.com</Prompt>
+      {/* <ScrollFullContainer> */}
+      <div className={classes.root}>
+        <TextField
+          label='Message *'
+          onChange={(e) => setMessage(e.target.value)}
+          id='outlined-margin-none'
+          defaultValue=''
+          className={classes.textField}
+          variant='outlined'
+          margin='dense'
+          multiline
+          rows={4}
+        />
+        <br />
+        <TextField
+          label='Name *'
+          onChange={(e) => setName(e.target.value)}
+          id='outlined-margin-dense'
+          defaultValue=''
+          className={classes.textField}
+          variant='outlined'
+          margin='dense'
+        />
+        <br />
+        <TextField
+          label='Email *'
+          onChange={(e) => setEmail(e.target.value)}
+          id='outlined-margin-dense'
+          defaultValue=''
+          className={classes.textField}
+          margin='dense'
+          variant='outlined'
+        />
+      </div>
+      {showSubmitButton ? (
+        <Button
+          style={{
+            width: '170px',
+          }}
+          onClick={() => {
+            if (validateEmailFormat(email) && name && message) {
+              axios.post('/email', {
+                email,
+                name,
+                message,
+                subject: 'Contact me message',
+              })
+              setSuccess(true)
+              setError(false)
+              setShowSubmitButton(false)
+            } else setError(true)
+          }}
+        >
+          <Prompt to='/contact'>Send</Prompt>
+        </Button>
+      ) : (
+        <Success>
+          {success && 'Your message has been sent successfuly! 🤩'}
+        </Success>
+      )}
+      <Error>
+        {error &&
+          'Please make sure the email format is correct and all the fields are filled'}
+      </Error>
+      <Prompt> pingpongistas [at] gmail.com</Prompt>
 
-        <Prompt>
-          This project is created by{' '}
-          <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-            Angeliki
-          </StyledALink>
-        </Prompt>
-      </ScrollFullContainer>
+      <Prompt>
+        This project is created by{' '}
+        <StyledALink href='https://angelikipatrinou.com' target='_blank'>
+          Angeliki
+        </StyledALink>
+      </Prompt>
+      {/* </ScrollFullContainer> */}
     </SectionContainer>
   )
 }

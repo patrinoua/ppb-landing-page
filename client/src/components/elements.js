@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { colors } from '../style-guide/colors'
 export const SectionContainer = styled.div`
-  // text-align: center;
   height: 90vh;
   width: 100%;
   display: flex;
@@ -10,7 +9,6 @@ export const SectionContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  // margin-top: 20px;
   padding: 10px;
   overflow: scroll;
   font-size: 18px;
@@ -66,7 +64,8 @@ export const Logo = styled.div`
   width: 90%;
   max-width: 500px;
   height: 25vh;
-  max-height: 250px;
+  min-height: 200px;
+  max-height: 450px;
   background-image: url('logo.png');
   background-size: contain;
   background-repeat: no-repeat;
