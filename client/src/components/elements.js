@@ -89,7 +89,6 @@ export const Description = styled(Section)`
 export const AboutSection = styled.div`
   width: 100%;
   max-width: 90%;
-  height: 33.33%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
