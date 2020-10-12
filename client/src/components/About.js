@@ -46,13 +46,13 @@ function About() {
         <Prompt>Play with other people in your area!</Prompt>
         <H1>Available on</H1>
         <a
-          href='https://play.google.com/store/apps/details?id=com.patrinoua.PingPongBuds'
+          href='https://play.google.com/store/apps/details?id=com.patrinoua.PingPongBuddies'
           target='_blank'
         >
           <AvailableOn />
         </a>
         <br />
-        <Prompt>Leave your email if you wanna get the latest updates!</Prompt>
+        <Prompt>Leave your email to get latest updates!</Prompt>
         <br />
       </AboutSection>
       <GetInvolved>
