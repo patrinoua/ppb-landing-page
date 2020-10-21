@@ -1,16 +1,17 @@
 import React from 'react'
-import { SectionContainer } from './elements'
 import Button from '@material-ui/core/Button'
 
 import { NavigationButtonItem } from './elements'
 import { Prompt } from '../style-guide/typography'
 function NextSteps() {
   return (
-    <SectionContainer>
+    <div>
       <Prompt>
-        PingPongBuddies is only the start! The idea is to create an app where
-        people can find other people for any activity they wish: From ping pong
-        to playing chess, going to the fleamarket or even co-working in a cafe!
+        PingPongBuddies is only the beginning!
+        <br /> The idea is to create an app where people can find other people
+        for any activity they wish:
+        <br />
+        From tennis to chess, going to the fleamarket or co-working in a cafe!
       </Prompt>
       <Prompt>Sounds interesting/wanna get involved?</Prompt>
       <Prompt>Get in touch!</Prompt>
@@ -20,7 +21,7 @@ function NextSteps() {
       >
         <NavigationButtonItem to='/contact'>Contact</NavigationButtonItem>
       </Button>
-    </SectionContainer>
+    </div>
   )
 }
 

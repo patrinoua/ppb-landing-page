@@ -42,7 +42,7 @@ function Contact() {
   const classes = useStyles()
 
   return (
-    <SectionContainer>
+    <div>
       <Logo />
       {/* <ScrollFullContainer> */}
       <Error>
@@ -117,7 +117,7 @@ function Contact() {
         </StyledALink>
       </Prompt>
       {/* </ScrollFullContainer> */}
-    </SectionContainer>
+    </div>
   )
 }
 

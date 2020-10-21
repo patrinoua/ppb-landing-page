@@ -6,7 +6,6 @@ import TextField from '@material-ui/core/TextField'
 import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import {
-  SectionContainer,
   Logo,
   Error,
   Success,
@@ -40,7 +39,7 @@ function About() {
     })
   }
   return (
-    <SectionContainer>
+    <div>
       <Logo />
       <AboutSection>
         <Prompt>Play with other people in your area!</Prompt>
@@ -51,6 +50,7 @@ function About() {
         >
           <AvailableOn />
         </a>
+        <br />
         <br />
         <Prompt>Leave your email to get latest updates!</Prompt>
         <br />
@@ -123,7 +123,7 @@ function About() {
           </div>
         </FormControl>
       </GetInvolved>
-    </SectionContainer>
+    </div>
   )
 }
 
