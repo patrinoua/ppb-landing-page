@@ -17,7 +17,13 @@ export const Logo = styled.div`
     min-height: 110px;
   }
 `
-
+export const SContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`
+//stopped using this:
 export const SectionContainer = styled.div`
   height: 90vh;
   width: 100%;
@@ -70,7 +76,35 @@ export const Section = styled.div`
   max-width: 90%;
   @media (max-width: 750px) {
     height: auto;
-    min-height: auto;
+    min-height: 200px;
+    font-size: 16px;
+  }
+`
+
+export const AboutSection = styled.div`
+  display: flex;
+  width: 100%;
+  // background: pink;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 270px;
+  flex-shrink: 0;
+  @media (max-width: 450px) {
+    min-height: 150px;
+    height: auto;
+    margin: 10px 0;
+  }
+`
+export const GetInvolved = styled.div`
+  width: 400px;
+  height: 33.33%;
+  display: flex;
+  flex-direction: column;
+  // background: orange;
+  @media (max-width: 750px) {
+    width: 100%;
+    min-height: 200px;
     font-size: 16px;
   }
 `
@@ -86,28 +120,12 @@ export const Description = styled(Section)`
     min-height: 200px;
   }
 `
-export const AboutSection = styled.div`
-  width: 100%;
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 270px;
-  flex-shrink: 0;
-  @media (max-width: 450px) {
-    min-height: 150px;
-    height: auto;
-    margin: 10px 0;
-  }
-`
-
 export const TextContainer = styled(Description)`
   height: auto;
   min-height: auto;
 `
 
-export const Error = styled(Section)`
+export const Error = styled.div`
   height: 50px;
   font-size: 16px;
   color: red;
@@ -117,14 +135,6 @@ export const Success = styled(Section)`
   height: 35px;
   font-size: 16px;
   max-width: 100%;
-`
-export const GetInvolved = styled(Section)`
-  height: 20%;
-  max-width: 300px;
-  min-height: 140px;
-  @media (max-width: 450px) {
-    width: 80%;
-  }
 `
 
 export const NavigationButtonItem = styled(Link)`
@@ -166,7 +176,7 @@ export const ButtonItem = styled.div`
   }
 `
 export const AvailableOn = styled.div`
-  width: 400px;
+  width: 80vw;
   height: 100px;
   background-image: url('assets/GooglePlay.png');
   background-size: contain;

@@ -13,13 +13,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   margin-top: 70px;
   font-size: 18px;
+  padding: 20px;
+  box-sizing: border-box;
   @media (max-width: 750px) {
     font-size: 14px;
-    width: 100%;
     margin-top: 40px;
   }
 `

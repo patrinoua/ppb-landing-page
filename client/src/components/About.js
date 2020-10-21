@@ -7,6 +7,7 @@ import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import {
   Logo,
+  SContainer,
   Error,
   Success,
   GetInvolved,
@@ -39,7 +40,7 @@ function About() {
     })
   }
   return (
-    <div>
+    <SContainer>
       <Logo />
       <AboutSection>
         <Prompt>Play with other people in your area!</Prompt>
@@ -52,13 +53,12 @@ function About() {
         </a>
         <br />
         <br />
-        <Prompt>Leave your email to get latest updates!</Prompt>
-        <br />
+        <Prompt>Leave your email below to get latest updates!</Prompt>
       </AboutSection>
       <GetInvolved>
         <FormControl fullWidth>
           <TextField
-            style={{ fontFamily: 'Open Sans', marginTop: '20px' }}
+            style={{ fontFamily: 'Open Sans' }}
             id='email'
             label='E-mail'
             onChange={(e) => {
@@ -123,7 +123,7 @@ function About() {
           </div>
         </FormControl>
       </GetInvolved>
-    </div>
+    </SContainer>
   )
 }
 

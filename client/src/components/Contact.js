@@ -3,12 +3,13 @@ import '../App.css'
 import axios from 'axios'
 import validateEmailFormat from '../utils/validateEmailFormat'
 import { makeStyles } from '@material-ui/core/styles'
+import FormControl from '@material-ui/core/FormControl'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import { Prompt } from '../style-guide/typography'
 
 import {
-  SectionContainer,
+  SContainer,
   // ScrollFullContainer,
   Error,
   Logo,
@@ -18,17 +19,21 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexDirection: 'column',
-    paddingBottom: '20px',
-    height: 'auto',
-    minHeight: '200px',
-    minWidth: '280px',
+    display: 'flex',
+    alignItems: 'center',
+    minHeight: '270px',
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
+    minHeight: '40px',
     width: '23ch',
+    minWidth: '280px',
     maxWidth: '90%',
+  },
+  button: {
+    minHeight: 50,
+    width: 170,
   },
 }))
 
@@ -42,14 +47,10 @@ function Contact() {
   const classes = useStyles()
 
   return (
-    <div>
+    <SContainer>
       <Logo />
       {/* <ScrollFullContainer> */}
-      <Error>
-        {error &&
-          'Please make sure the email format is correct and all the fields are filled'}
-      </Error>
-      <div className={classes.root}>
+      <FormControl fullWidth className={classes.root}>
         <TextField
           label='Message *'
           onChange={(e) => setMessage(e.target.value)}
@@ -81,12 +82,10 @@ function Contact() {
           margin='dense'
           variant='outlined'
         />
-      </div>
+      </FormControl>
       {showSubmitButton ? (
         <Button
-          style={{
-            width: '170px',
-          }}
+          className={classes.button}
           onClick={() => {
             if (validateEmailFormat(email) && name && message) {
               axios.post('/email', {
@@ -108,16 +107,24 @@ function Contact() {
           {success && 'Your message has been sent successfuly! 🤩'}
         </Success>
       )}
-
+      {error && (
+        <Error>
+          Please make sure the email format is correct and all the fields are
+          filled
+        </Error>
+      )}
+      <br />
       <Prompt> pingpongistas [at] gmail.com</Prompt>
+      <br />
       <Prompt>
         This project is created by{' '}
         <StyledALink href='https://angelikipatrinou.com' target='_blank'>
           Angeliki
         </StyledALink>
       </Prompt>
-      {/* </ScrollFullContainer> */}
-    </div>
+      <br />
+      <br />.{/* </ScrollFullContainer> */}
+    </SContainer>
   )
 }
 

@@ -38,7 +38,7 @@ export const Prompt = styled.div`
   font-size: 20px;
   line-height: 24px;
   color: ${colors.charcoal};
-  margin: 30px 0;
+  margin: 30px 10px;
   max-width: 700px;
   @media (max-width: 450px) {
     font-size: 16px;

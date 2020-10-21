@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  height: 60px;
   width: 100%;
   position: fixed;
-  // padding-top: 10px;
   top: 0;
+  background: white;
   display: flex;
   justify-content: flex-end;
-  height: 50px;
   justify-content: center;
+  align-items: center;
 `
 export const Item = styled(Link)`
   display: flex;
@@ -19,8 +20,8 @@ export const Item = styled(Link)`
     //   return '2px solid #08ccaa'
     // }
   }};
-  padding: 20px;
-  padding-bottom: 5px;
+  padding: 10px 20px;
+  // padding-bottom: 5px;
   margin: 0 15px;
   text-decoration: none;
   &: hover {

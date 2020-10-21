@@ -5,7 +5,6 @@ const ImagesContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  // align-items: center;
   @media (max-width: 750px) {
     flex-direction: column;
     align-items: center;
@@ -36,13 +35,14 @@ const Image = styled.div`
 `
 function Screenshots() {
   const images = [
-    'IMG_5105.PNG',
-    'IMG_5106.PNG',
-    'IMG_5109.PNG',
-    'IMG_5110.PNG',
-    // 'IMG_5115.PNG', //otherUserProfile
-    'IMG_5114.PNG',
-    'IMG_5111.PNG',
+    'intro.PNG',
+    'intro-1.PNG',
+    'allow-notifications.PNG',
+    'profile.PNG',
+    'users.PNG',
+    // 'otherUserProfile.PNG', //otherUserProfile
+    'chat.PNG',
+    // 'chats.PNG',
   ]
   return (
     <ImagesContainer>
