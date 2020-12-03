@@ -7,6 +7,7 @@ import Screenshots from './components/Screenshots'
 import NextSteps from './components/NextSteps'
 import Contact from './components/Contact'
 import Policy from './components/Policy'
+import DeleteAccount from './components/DeleteAccount'
 import NavigationBar from './components/NavigationBar'
 
 const Container = styled.div`
@@ -34,6 +35,7 @@ function App() {
         <Route exact path='/nextsteps' render={() => <NextSteps />} />
         <Route exact path='/contact' render={() => <Contact />} />
         <Route exact path='/policy' render={() => <Policy />} />
+        <Route exact path='/deleteAccount' render={() => <DeleteAccount />} />
       </Container>
     </BrowserRouter>
   )
