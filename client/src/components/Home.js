@@ -22,7 +22,7 @@ const UpDown = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   @media (max-width: 650px) {
     justify-content: center;
@@ -35,7 +35,7 @@ const EmptyBox = styled.div`
     display: none;
   }
 `
-const Logo = styled.div`
+const LogoContainer = styled.div`
   width: 50%;
   min-width: 300px;
   height: 15vh;
@@ -45,10 +45,28 @@ const Logo = styled.div`
   background-repeat: no-repeat;
   background-position: center;
 `
+const Logo = styled.div`
+  min-width: 300px;
+  height: 15vh;
+  min-height: 150px;
+  // background: purple;
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+`
+const ExplanatoryText = styled.div`
+  min-width: 300px;
+  height: 15vh;
+  min-height: 150px;
+  // background: yellow;
+  display: flex;
+  justify-content: center;
+`
 const LinkToDownload = styled.div`
   width: 50%;
   min-width: 300px;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -74,34 +92,41 @@ const GreenScquare = styled.div`
 `
 function About() {
   return (
-    <Container>
-      <GreenScquare></GreenScquare>
-      <OverLayer>
-        <UpDown>
-          <Logo />
-          <EmptyBox />
-        </UpDown>
-        <UpDown>
-          <EmptyBox />
-          <LinkToDownload>
-            <typography.H1>Available on</typography.H1>
-            <a
-              href='https://play.google.com/store/apps/details?id=com.patrinoua.PingPongBuddies'
-              target='_blank'
-            >
-              <AvailableOn />
-            </a>
-          </LinkToDownload>
-        </UpDown>
-        <typography.H2>
-          Project by{' '}
-          <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-            Angeliki
-          </StyledALink>
-          , 2020
-        </typography.H2>
-      </OverLayer>
-    </Container>
+    <>
+      <Container>
+        <GreenScquare></GreenScquare>
+        <OverLayer>
+          <UpDown>
+            <LogoContainer>
+              <Logo></Logo>
+              <ExplanatoryText>
+                <typography.H2>Play with locals in your area!</typography.H2>
+              </ExplanatoryText>
+            </LogoContainer>
+            <EmptyBox />
+          </UpDown>
+          <UpDown>
+            <EmptyBox />
+            <LinkToDownload>
+              <typography.H1>Available on</typography.H1>
+              <a
+                href='https://play.google.com/store/apps/details?id=com.patrinoua.PingPongBuddies'
+                target='_blank'
+              >
+                <AvailableOn />
+              </a>
+            </LinkToDownload>
+          </UpDown>
+          <typography.H3>
+            Project by{' '}
+            <StyledALink href='https://angelikipatrinou.com' target='_blank'>
+              Angeliki Patrinou
+            </StyledALink>
+            , 2020
+          </typography.H3>
+        </OverLayer>
+      </Container>
+    </>
   )
 }
 

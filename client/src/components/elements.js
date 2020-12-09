@@ -47,7 +47,7 @@ export const SectionContainer = styled.div`
 `
 export const StyledALink = styled.a`
   color: ${colors.almostBlack};
-  text-decoration: none;
+  // text-decoration: none;
   display: inline;
 `
 export const ScrollFullContainer = styled.div`

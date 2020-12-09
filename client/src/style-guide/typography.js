@@ -14,8 +14,8 @@ export const H1 = styled.div`
 export const H2 = styled.div`
   font-family: 'San Francisco', 'Helvetica Neue', Roboto, 'Segoe WP', 'Segoe UI';
   font-weight: 500;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 26px;
+  line-height: 36px;
   margin: 20px;
   color: ${colors.almostBlack};
 `
