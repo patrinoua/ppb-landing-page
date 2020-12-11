@@ -9,6 +9,7 @@ export const H1 = styled.div`
   color: ${colors.almostBlack};
   font-style: normal;
   margin: 20px 0;
+  text-align: center;
   // letter-spacing: 0.05em;
 `
 export const H2 = styled.div`
@@ -17,12 +18,14 @@ export const H2 = styled.div`
   font-size: 26px;
   line-height: 36px;
   margin: 20px;
+  text-align: center;
   color: ${colors.almostBlack};
 `
 export const H3 = styled.div`
   font-family: 'San Francisco', 'Helvetica Neue', Roboto, 'Segoe WP', 'Segoe UI';
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
+  text-align: center;
   color: ${({ color }) => color || colors.almostBlack};
 `
 export const Regular = styled.div`

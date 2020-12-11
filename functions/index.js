@@ -4,6 +4,12 @@ const nodemailer = require('nodemailer')
 
 const app = express()
 
+console.log('hi')
+
+app.get('/hi', (req, res) => {
+  console.log('hi!!')
+  res.send(`Hioooo`)
+})
 app.get('/server/timestamp', (req, res) => {
   res.send(`${Date.now()}`)
 })
@@ -14,6 +20,7 @@ app.get('/timestamp-cached', (req, res) => {
 })
 
 app.post('/server/email', (req, res) => {
+  console.log('req,res', req, res)
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
