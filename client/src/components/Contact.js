@@ -45,7 +45,11 @@ function Contact() {
   const [success, setSuccess] = useState(false)
   const [showSubmitButton, setShowSubmitButton] = useState(true)
   const classes = useStyles()
-
+ 
+  axios
+    .get('/hi')
+    .then()
+    .catch((err) => console.log('errr', error))
   return (
     <SContainer>
       <Logo />
