@@ -46,7 +46,7 @@ export const SectionContainer = styled.div`
   }
 `
 export const StyledALink = styled.a`
-  color: ${colors.charcoal};
+  color: ${colors.almostBlack};
   // text-decoration: none;
   display: inline;
 `
