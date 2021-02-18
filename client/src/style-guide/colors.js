@@ -9,6 +9,7 @@ export const colors = {
 
   black: '#000000',
   charcoal: '#333333',
+  almostBlack: '#131313',
   mediumGray: '#8C8C8C',
   lightGray: '#CDCDCD',
   whisper: '#E6E6E6',
