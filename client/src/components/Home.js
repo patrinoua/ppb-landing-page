@@ -13,6 +13,8 @@ const OverLayer = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
+  // background: grey;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +92,14 @@ const GreenScquare = styled.div`
     border-right: 120vh solid transparent;
   }
 `
+const Screenshots = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url(assets/Screenshots.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+`
 function About() {
   return (
     <>
@@ -117,14 +127,24 @@ function About() {
               </a>
             </LinkToDownload>
           </UpDown>
+        </OverLayer>
+        <Screenshots />
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: 80,
+            marginBottom: 30,
+          }}
+        >
           <typography.H3>
             Project by{' '}
-            <StyledALink href='https://angelikipatrinou.com' target='_blank'>
-              Angeliki Patrinou
+            <StyledALink href='https://angelapatrinou.com' target='_blank'>
+              Angela Patrinou
             </StyledALink>
-            , 2020
+            , 2021
           </typography.H3>
-        </OverLayer>
+        </div>
       </Container>
     </>
   )
