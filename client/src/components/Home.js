@@ -110,7 +110,7 @@ function About() {
             <LogoContainer>
               <Logo></Logo>
               <ExplanatoryText>
-                <typography.H2>Play with people in your area!</typography.H2>
+                <typography.H1>Meet and play!</typography.H1>
               </ExplanatoryText>
             </LogoContainer>
             <EmptyBox />
