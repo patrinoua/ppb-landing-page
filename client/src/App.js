@@ -9,6 +9,7 @@ import Contact from './components/Contact'
 import Policy from './components/Policy'
 import DeleteAccount from './components/DeleteAccount'
 import NavigationBar from './components/NavigationBar'
+import Agreement from './components/Agreement'
 
 const Container = styled.div`
   display: flex;
@@ -36,6 +37,7 @@ function App() {
         <Route exact path='/contact' render={() => <Contact />} />
         <Route exact path='/policy' render={() => <Policy />} />
         <Route exact path='/deleteAccount' render={() => <DeleteAccount />} />
+        <Route exact path='/agreement' render={() => <Agreement />} />
       </Container>
     </BrowserRouter>
   )
