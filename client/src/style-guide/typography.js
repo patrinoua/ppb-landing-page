@@ -16,7 +16,7 @@ export const H2 = styled.div`
   font-weight: 500;
   font-size: 28px;
   line-height: 36px;
-  margin: 20px;
+  margin: 20px 0;
   color: ${colors.almostBlack};
 `
 export const H3 = styled.div`
